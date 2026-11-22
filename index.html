@@ -37,6 +37,7 @@
       Little Days
     </a>
     <nav aria-label="Primary">
+      <a href="#pricing">Pricing</a>
       <a href="support.html">Support</a>
       <a href="privacy.html">Privacy</a>
     </nav>
@@ -45,8 +46,8 @@
   <main id="main">
     <section class="hero">
       <div class="hero-copy">
-        <h1>A calm, simple baby tracker for the whole family.</h1>
-        <p class="lede">Log feeds, diapers and sleep in one tap — even at three in the morning. Everyone who cares for your baby shares one profile, kept in sync on every phone.</p>
+        <h1>One baby. Every caregiver.</h1>
+        <p class="lede">A calm tracker for feeds, diapers and sleep — $9.99 once, for the whole family.</p>
         <div class="hero-actions">
           <p class="store">
             <span class="soon">Coming soon</span>
@@ -55,12 +56,65 @@
               <span><small>Download on the</small><strong>App Store</strong></span>
             </span>
           </p>
-          <p class="price-hint"><b>$9.99</b> once, for the whole family</p>
+          <p class="price-hint"><b>No subscriptions, ads, or in-app purchases</b></p>
         </div>
       </div>
-      <div class="device">
-        <img src="img/today.webp" width="780" height="1510" alt="Little Days Today screen for a sample baby named Olive, with one-tap buttons for Feed, Diaper and Sleep, a next-feed countdown, and last-24-hour counts." fetchpriority="high">
+      <div class="demo-wrap">
+        <div class="device">
+          <video id="demo" autoplay muted loop playsinline preload="metadata" poster="img/demo-poster.jpg" width="780" height="1510" aria-label="A short looping look at Little Days, using sample data only: one-tap logging, days that start at birth time, a feeding alarm, growth charts and a pediatrician summary.">
+            <source src="img/demo-loop.mp4" type="video/mp4">
+          </video>
+        </div>
+        <button type="button" class="demo-toggle" data-for="demo">Pause demo</button>
+        <p class="demo-note">Sample data throughout</p>
       </div>
+    </section>
+
+    <section class="section" aria-labelledby="compare-title">
+      <h2 id="compare-title">Why families switch</h2>
+      <p class="intro">The popular baby apps are useful — and many of the things families actually need sit behind a subscription, or behind a single shared login. Little Days is $9.99 once, and every caregiver gets their own account.</p>
+      <p class="compare-hint" id="compare-hint">Swipe to compare Huckleberry and Nara →</p>
+      <div class="table-wrap" tabindex="0" role="region" aria-labelledby="compare-title" aria-describedby="compare-hint compare-caption">
+        <table class="compare">
+          <caption class="sr-only">How Little Days compares with two widely used baby trackers. Details were checked on each company’s official site on November 22, 2026.</caption>
+          <thead>
+            <tr>
+              <th scope="col"><span class="sr-only">Feature</span></th>
+              <th scope="col">Little Days</th>
+              <th scope="col">Huckleberry</th>
+              <th scope="col">Nara Baby</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Price</th>
+              <td><b>$9.99 once</b>, for the whole family</td>
+              <td>Free basic logging. Plus and Premium are auto-renewing subscriptions. Sleep predictions, insights, AI logging and sleep plans are paid.</td>
+              <td>$9.99 a month, or $99.99 lifetime, after a 7-day trial</td>
+            </tr>
+            <tr>
+              <th scope="row">Caregiver logins</th>
+              <td>Each person signs in with their <b>own account</b> and joins with a 6-character invite code</td>
+              <td>Caregivers sign in to the <b>same account</b> on each phone</td>
+              <td>One payment covers invited caregivers</td>
+            </tr>
+            <tr>
+              <th scope="row">What’s included</th>
+              <td>Feeds, diapers, sleep, last-24-hour counts, birth-time days, a feeding alarm, WHO growth charts and a pediatrician summary</td>
+              <td>Free tier covers everyday logging and basic reports. Advanced reports and predictions are paid.</td>
+              <td>All features after you subscribe. When the trial ends, you can’t add new logs unless you pay.</td>
+            </tr>
+            <tr>
+              <th scope="row">Ads and subscriptions</th>
+              <td>No ads, no subscriptions, no in-app purchases</td>
+              <td>Subscriptions auto-renew unless you cancel</td>
+              <td>No ads. Monthly or lifetime plans, no extra paywalls after you subscribe</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="compare-caption" id="compare-caption">How Little Days compares with two widely used baby trackers. Details were checked on each company’s official site on November 22, 2026.</p>
+      <p class="compare-note">Sources: <a href="https://huckleberrycare.com/pricing">Huckleberry’s pricing page</a> and <a href="https://nara.com/pages/nara-baby-app-faqs">Nara’s official FAQ</a>, November 22, 2026. Plans and prices change.</p>
     </section>
 
     <section class="section" aria-labelledby="features-title">
@@ -100,42 +154,45 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="shots-title">
-      <h2 id="shots-title">A closer look</h2>
-      <p class="intro">The same soft colors and rounded shapes you’ll use at 3 a.m. Screens show sample data.</p>
-      <div class="shots">
-        <figure class="shot">
-          <img src="img/invite.webp" width="780" height="368" alt="Join with a 6-character invite code. The sample code shown is ABC123.">
-          <figcaption>A 6-character code is all it takes to share a baby.</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="img/birth-time.webp" width="780" height="988" alt="Baby profile settings with each day set to start at the baby's birth time, 2:20 PM, instead of midnight.">
-          <figcaption>Days can start at your baby’s birth time.</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="img/alarm.webp" width="780" height="912" alt="Feeding alarm settings: remind the family when a feed is due after 2 hours, including at night, with alerts on this phone.">
-          <figcaption>A feeding alarm the whole family shares.</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="img/growth.webp" width="780" height="1562" alt="Growth chart for weight with WHO percentile bands, showing 10 pounds 6.5 ounces at the 61st percentile, plus length and head.">
-          <figcaption>Growth tracking with WHO percentiles.</figcaption>
-        </figure>
-        <figure class="shot">
-          <img src="img/summary.webp" width="780" height="1688" alt="Pediatrician summary for Olive, a sample baby, with last-24-hour and last-7-day feeding, diaper and sleep totals, and a share button.">
-          <figcaption>A pediatrician summary you can share or print.</figcaption>
-        </figure>
-      </div>
+    <section class="section" aria-labelledby="film-title">
+      <h2 id="film-title">See how it works</h2>
+      <p class="intro">A one-minute look at Little Days. The screens show sample data.</p>
+      <figure class="film">
+        <video controls playsinline preload="metadata" poster="video/explainer-poster.jpg" width="720" height="1280">
+          <source src="video/explainer.mp4" type="video/mp4">
+          Sorry, your browser can’t play this video.
+        </video>
+        <figcaption>Little Days, in about a minute. $9.99 once, for the whole family.</figcaption>
+      </figure>
     </section>
 
-    <!-- Testimonials stay hidden until the quotes are approved. Do not add quotes here before that. -->
-    <section class="section testimonials" id="testimonials" hidden>
+    <section class="section testimonials" id="testimonials" aria-labelledby="testimonials-title">
       <h2 id="testimonials-title">What parents say</h2>
       <div class="quotes">
-        <!-- Approved quotes go here. -->
+        <blockquote class="quote">
+          <p>I can see the last 24 hours at a glance, with wet and dirty diapers, feeds and sleep, and each day starts at her birth time, so every day of life is one full day.</p>
+          <footer><cite>Jess</cite></footer>
+        </blockquote>
+        <blockquote class="quote">
+          <p>We each have our own login on the same baby, everything stays in sync, and the feeding alarm is for both of us.</p>
+          <footer><cite>Adam</cite></footer>
+        </blockquote>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="price-title">
+    <section class="section" aria-labelledby="privacy-title">
+      <div class="privacy">
+        <h2 id="privacy-title">Your family’s data stays in the family</h2>
+        <ul>
+          <li>Only the people you invite can see your baby’s information.</li>
+          <li>We never sell your data. There are no ads, no tracking and no analytics.</li>
+          <li>You can delete your account at any time, right in the app.</li>
+        </ul>
+        <p><a href="privacy.html">Read the full privacy policy</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="pricing" aria-labelledby="price-title">
       <div class="pricing">
         <h2 id="price-title">A fair price, once</h2>
         <p class="amount">$9.99</p>
@@ -146,6 +203,28 @@
           <li>No in-app purchases</li>
           <li>No ads</li>
         </ul>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Questions families ask</h2>
+      <div class="faq">
+        <article class="faq-item">
+          <h3>How do I share Little Days with my partner?</h3>
+          <p>Open <b>Family</b>, then make an invite code. It’s six characters. Your partner — or a grandparent or nanny — creates their own account, enters the code, and they’ll see the same baby, live, on their phone.</p>
+        </article>
+        <article class="faq-item">
+          <h3>How do I delete my account?</h3>
+          <p>In the app, go to <b>Family → Settings → Delete my account</b>, and type DELETE to confirm. If you were the only caregiver on a baby, that baby’s logs are deleted too. You can also email us and we’ll help.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Is our family’s data private?</h3>
+          <p>Yes. Only the people you invite can see your baby’s information. We never sell your data, and there are no ads, tracking or analytics. You can read the full <a href="privacy.html">privacy policy</a>.</p>
+        </article>
+        <article class="faq-item">
+          <h3>What does Little Days cost?</h3>
+          <p>$9.99, paid once, for the whole family. There are no subscriptions, in-app purchases or ads. The App Store app is coming soon.</p>
+        </article>
       </div>
     </section>
   </main>
@@ -159,5 +238,18 @@
     <p>Little Days · A calm baby tracker for the whole family</p>
   </footer>
 </div>
+<script>
+(function(){
+  var video=document.getElementById('demo');
+  var btn=document.querySelector('.demo-toggle');
+  if(!video||!btn) return;
+  var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce){ video.removeAttribute('autoplay'); video.pause(); btn.textContent='Play demo'; }
+  btn.addEventListener('click', function(){
+    if(video.paused){ video.play(); btn.textContent='Pause demo'; }
+    else { video.pause(); btn.textContent='Play demo'; }
+  });
+})();
+</script>
 </body>
 </html>
