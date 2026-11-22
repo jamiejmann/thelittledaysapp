@@ -286,3 +286,20 @@ figure{margin:0}
 .policy p{margin:8px 0;font-weight:600}
 .policy ul{margin:8px 0;padding-left:22px}
 .policy li{margin:4px 0;font-weight:600}
+
+/* Hidden until quotes are approved. To publish: add the approved quotes
+   in index.html and remove the hidden attribute. */
+.testimonials[hidden]{display:none !important}
+.quotes{display:grid;gap:14px;grid-template-columns:1fr}
+.quote{
+  background:var(--card);border-radius:var(--r);
+  padding:20px 22px;box-shadow:var(--shadow);
+}
+.quote p{margin:0 0 12px;font-size:1.05rem;font-weight:600;line-height:1.55}
+.quote p::before{content:"“"}
+.quote p::after{content:"”"}
+.quote footer{font-weight:800;font-size:15px;color:var(--soft)}
+.quote footer cite{font-style:normal;color:var(--ink)}
+@media (min-width:640px){
+  .quotes{grid-template-columns:1fr 1fr}
+}
