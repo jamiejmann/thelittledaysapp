@@ -58,6 +58,16 @@
           </p>
           <p class="price-hint"><b>$9.99 once. No upgrades, no extra costs.</b></p>
         </div>
+        <form class="launch-form launch-form-hero" data-source="hero" novalidate>
+          <p class="launch-heading">Get notified when Little Days launches</p>
+          <div class="launch-row">
+            <label class="sr-only" for="launch-email-hero">Email address</label>
+            <input type="email" id="launch-email-hero" name="email" required autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254" spellcheck="false">
+            <button type="submit">Notify me</button>
+          </div>
+          <p class="launch-note">We’ll email you once at launch. No spam.</p>
+          <p class="launch-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
       <div class="demo-wrap">
         <div class="device">
@@ -203,6 +213,16 @@
           <li>No extra costs</li>
           <li>No subscriptions or ads</li>
         </ul>
+        <form class="launch-form" id="notify" data-source="pricing" novalidate>
+          <h3 class="launch-heading">Get notified when Little Days launches</h3>
+          <div class="launch-row">
+            <label class="sr-only" for="launch-email-pricing">Email address</label>
+            <input type="email" id="launch-email-pricing" name="email" required autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254" spellcheck="false">
+            <button type="submit">Notify me</button>
+          </div>
+          <p class="launch-note">We’ll email you once at launch. No spam.</p>
+          <p class="launch-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
@@ -248,6 +268,73 @@
   btn.addEventListener('click', function(){
     if(video.paused){ video.play(); btn.textContent='Pause demo'; }
     else { video.pause(); btn.textContent='Play demo'; }
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var ENDPOINT='https://dpuzbskjivrbfapadewy.supabase.co/rest/v1/launch_signups';
+  var KEY='sb_publishable_D4r76K6cH2xcEhwnJYyNMw_JSJKhg4k';
+  var EMAIL_RE=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var THANKS="You’re on the list. We’ll email you once when Little Days launches.";
+  var FAIL="Something went wrong. Please try again, or email thelittledaysapp@gmail.com.";
+
+  function status(form, msg, kind){
+    var el=form.querySelector('.launch-status');
+    if(!el) return;
+    el.textContent=msg;
+    el.className='launch-status'+(kind?(' is-'+kind):'');
+  }
+
+  function done(form){
+    form.classList.add('is-done');
+    var row=form.querySelector('.launch-row');
+    var note=form.querySelector('.launch-note');
+    if(row) row.hidden=true;
+    if(note) note.hidden=true;
+    var btn=form.querySelector('button[type="submit"]');
+    if(btn) btn.disabled=true;
+    status(form, THANKS, 'ok');
+  }
+
+  function onSubmit(e){
+    e.preventDefault();
+    var form=e.currentTarget;
+    if(form.classList.contains('is-done')) return;
+    var input=form.querySelector('input[name="email"]');
+    var btn=form.querySelector('button[type="submit"]');
+    var email=((input&&input.value)||'').trim().toLowerCase();
+    if(!EMAIL_RE.test(email)||email.length>254){
+      if(input){ input.classList.add('is-invalid'); input.focus(); }
+      status(form, 'Please enter a valid email address.', 'error');
+      return;
+    }
+    if(input) input.classList.remove('is-invalid');
+    if(btn) btn.disabled=true;
+    status(form, 'Saving…', '');
+    fetch(ENDPOINT,{
+      method:'POST',
+      headers:{
+        'apikey':KEY,
+        'Authorization':'Bearer '+KEY,
+        'Content-Type':'application/json',
+        'Prefer':'return=minimal'
+      },
+      body:JSON.stringify({email:email, source:form.getAttribute('data-source')||'site'})
+    }).then(function(res){
+      if(res.ok||res.status===409){ done(form); return; }
+      throw new Error('http '+res.status);
+    }).catch(function(){
+      if(btn) btn.disabled=false;
+      status(form, FAIL, 'error');
+    });
+  }
+
+  document.querySelectorAll('form.launch-form').forEach(function(form){
+    form.addEventListener('submit', onSubmit);
+    var input=form.querySelector('input[name="email"]');
+    if(input) input.addEventListener('input', function(){ input.classList.remove('is-invalid'); });
   });
 })();
 </script>
