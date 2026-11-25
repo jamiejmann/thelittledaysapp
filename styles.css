@@ -660,3 +660,6 @@ figure{margin:0}
   .printable{grid-template-columns:minmax(220px,320px) 1fr;gap:48px}
   .printable-preview{max-width:320px}
 }
+/* Hide the email row and note once a sign-up succeeds (display:flex would otherwise override [hidden]) */
+.launch-form [hidden]{display:none !important}
+.launch-form.is-done .launch-row,.launch-form.is-done .launch-note{display:none !important}
