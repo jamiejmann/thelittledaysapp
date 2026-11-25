@@ -46,92 +46,72 @@
       <a href="terms.html">Terms</a>
     </nav>
   </header>
+</div>
 
-  <main id="main">
-    <section class="hero">
+<main id="main">
+  <section class="band band-hero">
+    <div class="wrap hero">
       <div class="hero-copy">
+        <div class="lockup">
+          <img class="lockup-icon" src="icons/babyway-icon.svg" width="96" height="96" alt="The Babyway app icon: a smiling yellow chick on a teal background.">
+          <div class="lockup-text">
+            <p class="lockup-name">Babyway</p>
+            <p class="coming-pill">Coming soon to the App Store</p>
+          </div>
+        </div>
         <h1>One baby. Every caregiver.</h1>
         <p class="lede">One simple tracker for feeds, diapers, sleep and more — $9.99 once, for the whole family.</p>
-        <div class="hero-actions">
-          <p class="store">
-            <span class="soon">Coming soon</span>
-            <span class="store-badge" aria-label="Download on the App Store, coming soon">
-              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-              <span><small>Download on the</small><strong>App Store</strong></span>
-            </span>
-          </p>
-          <p class="price-hint"><b>$9.99 once. No upgrades, no extra costs.</b></p>
-        </div>
-        <form class="launch-form launch-form-hero" data-source="hero" novalidate>
-          <p class="launch-heading">Get notified when Babyway launches</p>
-          <div class="launch-row">
-            <label class="sr-only" for="launch-email-hero">Email address</label>
-            <input type="email" id="launch-email-hero" name="email" required autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254" spellcheck="false">
-            <button type="submit">Notify me</button>
-          </div>
-          <p class="launch-note">We’ll email you once at launch. No spam.</p>
-          <p class="launch-status" role="status" aria-live="polite"></p>
-        </form>
+        <p class="price-hint"><b>$9.99 once. No upgrades, no extra costs.</b></p>
       </div>
       <div class="demo-wrap">
-        <div class="device">
-          <video id="demo" autoplay muted loop playsinline preload="metadata" poster="img/demo-poster.jpg?v=5" width="780" height="1510" aria-label="A short looping look at Babyway, using sample data only: one-tap logging, today’s goals, logging a past feed, days that start at birth time, a feeding alarm, growth charts and a pediatrician summary.">
-            <source src="img/demo-loop.mp4?v=5" type="video/mp4">
-          </video>
+        <div class="iphone">
+          <span class="iphone-btn iphone-silent" aria-hidden="true"></span>
+          <span class="iphone-btn iphone-vol-up" aria-hidden="true"></span>
+          <span class="iphone-btn iphone-vol-down" aria-hidden="true"></span>
+          <span class="iphone-btn iphone-power" aria-hidden="true"></span>
+          <div class="iphone-screen">
+            <img id="demo-shot" src="img/shot-today.webp" width="800" height="1738" alt="Babyway’s Today screen, using sample data only: last feed, last diaper and sleep, today’s goals, and one-tap buttons for Feed, Diaper and Sleep.">
+            <video id="demo" hidden muted loop playsinline preload="metadata" poster="img/demo-poster.jpg?v=5" width="780" height="1510" aria-label="A short looping look at Babyway, using sample data only: one-tap logging, today’s goals, logging a past feed, days that start at birth time, a feeding alarm, growth charts and a pediatrician summary.">
+              <source src="img/demo-loop.mp4?v=5" type="video/mp4">
+            </video>
+          </div>
+          <span class="iphone-island" aria-hidden="true"></span>
         </div>
-        <button type="button" class="demo-toggle" data-for="demo">Pause demo</button>
+        <button type="button" class="demo-toggle" data-for="demo">Watch a quick look</button>
         <p class="demo-note">Sample data throughout</p>
       </div>
-    </section>
+      <form class="launch-form launch-form-hero" data-source="hero" novalidate>
+        <p class="launch-heading">Get notified when Babyway launches</p>
+        <div class="launch-row">
+          <label class="sr-only" for="launch-email-hero">Email address</label>
+          <input type="email" id="launch-email-hero" name="email" required autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254" spellcheck="false">
+          <button type="submit">
+            <img src="icons/icon-192.png" width="20" height="20" alt="">
+            Notify me
+          </button>
+        </div>
+        <p class="launch-note">We’ll email you once at launch. No spam.</p>
+        <p class="launch-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
 
-    <section class="section" aria-labelledby="compare-title">
-      <h2 id="compare-title">Why families switch</h2>
-      <p class="intro">The popular baby apps are useful — and many of the things families actually need sit behind a subscription, or behind a single shared login. Babyway is $9.99 once, and every caregiver gets their own account.</p>
-      <p class="compare-hint" id="compare-hint">Swipe to compare Huckleberry and Nara →</p>
-      <div class="table-wrap" tabindex="0" role="region" aria-labelledby="compare-title" aria-describedby="compare-hint compare-caption">
-        <table class="compare">
-          <caption class="sr-only">How Babyway compares with two widely used baby trackers. Details were checked on each company’s official site on November 22, 2026.</caption>
-          <thead>
-            <tr>
-              <th scope="col"><span class="sr-only">Feature</span></th>
-              <th scope="col">Babyway</th>
-              <th scope="col">Huckleberry</th>
-              <th scope="col">Nara Baby</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Price</th>
-              <td><b>$9.99 once</b>, for the whole family</td>
-              <td>Free basic logging. Plus and Premium are auto-renewing subscriptions. Sleep predictions, insights, AI logging and sleep plans are paid.</td>
-              <td>$9.99 a month, or $99.99 lifetime, after a 7-day trial</td>
-            </tr>
-            <tr>
-              <th scope="row">Caregiver logins</th>
-              <td>Each person signs in with their <b>own account</b> and joins with a 6-character invite code</td>
-              <td>Caregivers sign in to the <b>same account</b> on each phone</td>
-              <td>One payment covers invited caregivers</td>
-            </tr>
-            <tr>
-              <th scope="row">What’s included</th>
-              <td>Feeds, diapers, sleep, pumping and medicine (live timer or log a past entry), last-24-hour counts, daily goals for the first 8 weeks, birth-time days, a feeding alarm, WHO growth charts and a pediatrician summary</td>
-              <td>Free tier covers everyday logging and basic reports. Advanced reports and predictions are paid.</td>
-              <td>All features after you subscribe. When the trial ends, you can’t add new logs unless you pay.</td>
-            </tr>
-            <tr>
-              <th scope="row">Ads and subscriptions</th>
-              <td>No ads, no subscriptions, no in-app purchases</td>
-              <td>Subscriptions auto-renew unless you cancel</td>
-              <td>No ads. Monthly or lifetime plans, no extra paywalls after you subscribe</td>
-            </tr>
-          </tbody>
-        </table>
+  <section class="band band-teal" aria-labelledby="madeby-title">
+    <div class="chick-mark" aria-hidden="true"><img src="icons/icon-192.png" width="36" height="36" alt=""></div>
+    <div class="wrap">
+      <div class="madeby">
+        <h2 id="madeby-title">Made by</h2>
+        <blockquote>
+          <p>I built Babyway for friends with a newborn who were tired of sharing one login and paying for subscriptions.</p>
+          <footer>— Jamie, Massachusetts</footer>
+        </blockquote>
       </div>
-      <p class="compare-caption" id="compare-caption">How Babyway compares with two widely used baby trackers. Details were checked on each company’s official site on November 22, 2026.</p>
-      <p class="compare-note">Sources: <a href="https://huckleberrycare.com/pricing">Huckleberry’s pricing page</a> and <a href="https://nara.com/pages/nara-baby-app-faqs">Nara’s official FAQ</a>, November 22, 2026. Plans and prices change.</p>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" aria-labelledby="features-title">
+  <section class="band band-cream" aria-labelledby="features-title">
+    <div class="chick-mark" aria-hidden="true"><img src="icons/icon-192.png" width="36" height="36" alt=""></div>
+    <div class="wrap">
       <h2 id="features-title">Made for the whole family</h2>
       <p class="intro">The little things that make long days feel lighter — and let everyone stay in the loop.</p>
       <div class="features">
@@ -171,9 +151,12 @@
           <p>In one tap. A clear summary of feeds, diapers, sleep and growth, with the questions you want to ask the doctor. Tap Share to send it from your phone, or print it.</p>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" aria-labelledby="film-title">
+  <section class="band band-teal" aria-labelledby="film-title">
+    <div class="chick-mark" aria-hidden="true"><img src="icons/icon-192.png" width="36" height="36" alt=""></div>
+    <div class="wrap">
       <h2 id="film-title">See how it works</h2>
       <p class="intro">A one-minute look at Babyway. The screens show sample data.</p>
       <figure class="film">
@@ -183,10 +166,14 @@
         </video>
         <figcaption>Babyway, in about a minute. $9.99 once, every feature included.</figcaption>
       </figure>
-    </section>
+    </div>
+  </section>
 
-    <section class="section testimonials" id="testimonials" aria-labelledby="testimonials-title">
-      <h2 id="testimonials-title">What parents say</h2>
+  <section class="band band-warm testimonials" id="testimonials" aria-labelledby="testimonials-title">
+    <div class="chick-mark" aria-hidden="true"><img src="icons/icon-192.png" width="36" height="36" alt=""></div>
+    <div class="wrap">
+      <h2 id="testimonials-title">What early testers say</h2>
+      <p class="intro">Early testers (friends of the developer)</p>
       <div class="quotes">
         <blockquote class="quote">
           <p>I can see the last 24 hours at a glance, with wet and dirty diapers, feeds and sleep, and each day starts at her birth time, so every day of life is one full day.</p>
@@ -197,9 +184,79 @@
           <footer><cite>Adam</cite></footer>
         </blockquote>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" aria-labelledby="privacy-title">
+  <section class="band band-teal" aria-labelledby="compare-title">
+    <div class="chick-mark" aria-hidden="true"><img src="icons/icon-192.png" width="36" height="36" alt=""></div>
+    <div class="wrap">
+      <h2 id="compare-title">Why families switch</h2>
+      <p class="intro">The popular baby apps are useful — and many of the things families actually need sit behind a subscription, or behind a single shared login. Babyway is $9.99 once, and every caregiver gets their own account.</p>
+      <ul class="compare-points">
+        <li>
+          <span class="check" aria-hidden="true">✓</span>
+          <span><b>One-time price, not a subscription.</b> Babyway is $9.99 once, for the whole family.</span>
+        </li>
+        <li>
+          <span class="check" aria-hidden="true">✓</span>
+          <span><b>Every caregiver gets their own login.</b> Each person signs in with their own account and joins with a 6-character invite code.</span>
+        </li>
+        <li>
+          <span class="check" aria-hidden="true">✓</span>
+          <span><b>No ads, tracking or in-app purchases.</b> No subscriptions, either.</span>
+        </li>
+      </ul>
+      <details class="compare-details">
+        <summary>See full comparison</summary>
+        <p class="compare-hint" id="compare-hint">Swipe to compare Huckleberry and Nara →</p>
+        <div class="table-wrap" tabindex="0" role="region" aria-labelledby="compare-title" aria-describedby="compare-hint compare-caption">
+          <table class="compare">
+            <caption class="sr-only">How Babyway compares with two widely used baby trackers. Details were checked on each company’s official site on November 22, 2026.</caption>
+            <thead>
+              <tr>
+                <th scope="col"><span class="sr-only">Feature</span></th>
+                <th scope="col">Babyway</th>
+                <th scope="col">Huckleberry</th>
+                <th scope="col">Nara Baby</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Price</th>
+                <td><b>$9.99 once</b>, for the whole family</td>
+                <td>Free basic logging. Plus and Premium are auto-renewing subscriptions. Sleep predictions, insights, AI logging and sleep plans are paid.</td>
+                <td>$9.99 a month, or $99.99 lifetime, after a 7-day trial</td>
+              </tr>
+              <tr>
+                <th scope="row">Caregiver logins</th>
+                <td>Each person signs in with their <b>own account</b> and joins with a 6-character invite code</td>
+                <td>Caregivers sign in to the <b>same account</b> on each phone</td>
+                <td>One payment covers invited caregivers</td>
+              </tr>
+              <tr>
+                <th scope="row">What’s included</th>
+                <td>Feeds, diapers, sleep, pumping and medicine (live timer or log a past entry), last-24-hour counts, daily goals for the first 8 weeks, birth-time days, a feeding alarm, WHO growth charts and a pediatrician summary</td>
+                <td>Free tier covers everyday logging and basic reports. Advanced reports and predictions are paid.</td>
+                <td>All features after you subscribe. When the trial ends, you can’t add new logs unless you pay.</td>
+              </tr>
+              <tr>
+                <th scope="row">Ads and subscriptions</th>
+                <td>No ads, no subscriptions, no in-app purchases</td>
+                <td>Subscriptions auto-renew unless you cancel</td>
+                <td>No ads. Monthly or lifetime plans, no extra paywalls after you subscribe</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+      <p class="compare-caption" id="compare-caption">How Babyway compares with two widely used baby trackers. Details were checked on each company’s official site on November 22, 2026.</p>
+      <p class="compare-note">Sources: <a href="https://huckleberrycare.com/pricing">Huckleberry’s pricing page</a> and <a href="https://nara.com/pages/nara-baby-app-faqs">Nara’s official FAQ</a>, November 22, 2026. Plans and prices change.</p>
+    </div>
+  </section>
+
+  <section class="band band-cream" aria-labelledby="privacy-title">
+    <div class="chick-mark" aria-hidden="true"><img src="icons/icon-192.png" width="36" height="36" alt=""></div>
+    <div class="wrap">
       <div class="privacy">
         <h2 id="privacy-title">Your family’s data stays in the family</h2>
         <ul>
@@ -209,9 +266,12 @@
         </ul>
         <p><a href="privacy.html">Read the full privacy policy</a></p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="pricing" aria-labelledby="price-title">
+  <section class="band band-warm" id="pricing" aria-labelledby="price-title">
+    <div class="chick-mark" aria-hidden="true"><img src="icons/icon-192.png" width="36" height="36" alt=""></div>
+    <div class="wrap">
       <div class="pricing">
         <h2 id="price-title">A fair price, once</h2>
         <p class="amount">$9.99</p>
@@ -227,15 +287,21 @@
           <div class="launch-row">
             <label class="sr-only" for="launch-email-pricing">Email address</label>
             <input type="email" id="launch-email-pricing" name="email" required autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254" spellcheck="false">
-            <button type="submit">Notify me</button>
+            <button type="submit">
+              <img src="icons/icon-192.png" width="20" height="20" alt="">
+              Notify me
+            </button>
           </div>
           <p class="launch-note">We’ll email you once at launch. No spam.</p>
           <p class="launch-status" role="status" aria-live="polite"></p>
         </form>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="faq" aria-labelledby="faq-title">
+  <section class="band band-cream" id="faq" aria-labelledby="faq-title">
+    <div class="chick-mark" aria-hidden="true"><img src="icons/icon-192.png" width="36" height="36" alt=""></div>
+    <div class="wrap">
       <h2 id="faq-title">Questions families ask</h2>
       <div class="faq">
         <article class="faq-item">
@@ -255,10 +321,12 @@
           <p>$9.99 once. No upgrades, no extra costs. Every feature is included with a one-time purchase, for the whole family — no subscriptions or ads. The App Store app is coming soon.</p>
         </article>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+</main>
 
-  <footer class="site-footer">
+<footer class="site-footer">
+  <div class="wrap">
     <nav aria-label="Footer">
       <a href="support.html">Support</a>
       <a href="privacy.html">Privacy</a>
@@ -267,16 +335,23 @@
       <a href="mailto:hello@getbabyway.com">hello@getbabyway.com</a>
     </nav>
     <p>Babyway · The shared baby tracker for the whole family</p>
-  </footer>
-</div>
+  </div>
+</footer>
 <script>
 (function(){
   var video=document.getElementById('demo');
+  var shot=document.getElementById('demo-shot');
   var btn=document.querySelector('.demo-toggle');
   if(!video||!btn) return;
-  var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(reduce){ video.removeAttribute('autoplay'); video.pause(); btn.textContent='Play demo'; }
+  function showingVideo(){ return !video.hasAttribute('hidden'); }
   btn.addEventListener('click', function(){
+    if(!showingVideo()){
+      if(shot) shot.setAttribute('hidden','');
+      video.removeAttribute('hidden');
+      video.play();
+      btn.textContent='Pause demo';
+      return;
+    }
     if(video.paused){ video.play(); btn.textContent='Pause demo'; }
     else { video.pause(); btn.textContent='Play demo'; }
   });
