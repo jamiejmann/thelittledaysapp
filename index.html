@@ -28,7 +28,7 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="icons/icon-192.png" type="image/png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<link rel="stylesheet" href="styles.css?v=10">
+<link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
 <div class="blob b1" aria-hidden="true"></div>
@@ -76,8 +76,8 @@
           <span class="iphone-btn iphone-power" aria-hidden="true"></span>
           <div class="iphone-screen">
             <img id="demo-shot" src="img/shot-today.webp" width="800" height="1738" alt="Babyway’s Today screen, using sample data only: last feed, last diaper and sleep, today’s goals, and one-tap buttons for Feed, Diaper and Sleep.">
-            <video id="demo" hidden muted loop playsinline preload="metadata" poster="img/demo-poster.jpg?v=5" width="780" height="1510" aria-label="A short looping look at Babyway, using sample data only: one-tap logging, today’s goals, logging a past feed, days that start at birth time, a feeding alarm, growth charts and a pediatrician summary.">
-              <source src="img/demo-loop.mp4?v=5" type="video/mp4">
+            <video id="demo" hidden muted loop playsinline webkit-playsinline preload="metadata" poster="img/demo-poster.jpg?v=6" width="780" height="1510" aria-label="A short looping look at Babyway, using sample data only: one-tap logging, today’s goals, logging a past feed, days that start at birth time, a feeding alarm, growth charts and a pediatrician summary.">
+              <source src="img/demo-loop.mp4?v=6" type="video/mp4">
             </video>
           </div>
           <span class="iphone-island" aria-hidden="true"></span>
@@ -476,18 +476,64 @@
   var shot=document.getElementById('demo-shot');
   var btn=document.querySelector('.demo-toggle');
   if(!video||!btn) return;
+  video.muted=true;
+  video.defaultMuted=true;
+  video.playsInline=true;
+  video.setAttribute('playsinline','');
+  video.setAttribute('webkit-playsinline','');
   function showingVideo(){ return !video.hasAttribute('hidden'); }
-  btn.addEventListener('click', function(){
-    if(!showingVideo()){
-      if(shot) shot.setAttribute('hidden','');
-      video.removeAttribute('hidden');
-      video.play();
-      btn.textContent='Pause demo';
-      return;
+  function restoreScroll(x,y){ window.scrollTo(x,y); }
+  function showStill(){
+    video.setAttribute('hidden','');
+    if(shot) shot.removeAttribute('hidden');
+    btn.textContent='Play demo';
+    btn.setAttribute('aria-pressed','false');
+  }
+  function showVideo(){
+    if(shot) shot.setAttribute('hidden','');
+    video.removeAttribute('hidden');
+  }
+  function play(){
+    var x=window.scrollX, y=window.scrollY;
+    showVideo();
+    var done=function(){ restoreScroll(x,y); };
+    var p=video.play();
+    if(p&&p.then){
+      p.then(function(){
+        done();
+        btn.textContent='Pause demo';
+        btn.setAttribute('aria-pressed','true');
+      }).catch(function(){
+        done();
+        showStill();
+      });
+    } else {
+      done();
+      if(video.paused){ showStill(); }
+      else {
+        btn.textContent='Pause demo';
+        btn.setAttribute('aria-pressed','true');
+      }
     }
-    if(video.paused){ video.play(); btn.textContent='Pause demo'; }
-    else { video.pause(); btn.textContent='Play demo'; }
+  }
+  function pause(){
+    video.pause();
+    btn.textContent='Play demo';
+    btn.setAttribute('aria-pressed','false');
+  }
+  btn.addEventListener('click', function(){
+    if(!showingVideo()||video.paused) play();
+    else pause();
   });
+  var wrap=btn.closest('.demo-wrap')||btn;
+  function warm(){
+    try{
+      if(video.preload!=='auto'){ video.preload='auto'; }
+      if(video.readyState<2) video.load();
+    }catch(e){}
+    wrap.removeEventListener('pointerdown', warm);
+  }
+  wrap.addEventListener('pointerdown', warm);
 })();
 </script>
 
