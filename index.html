@@ -201,7 +201,7 @@
           <p>In one tap. A clear summary of feeds, diapers, sleep and growth, with the questions you want to ask the doctor. Tap Share to send it from your phone, or print it.</p>
         </article>
       </div>
-      <p class="coming-note">Coming in the next beta: a mic at the top of Today so you can say a feed or a diaper (on iPhone, the voice stays on the device), typical diaper counts by your baby’s age, and a simple supplement log with a days-given summary for checkups.</p>
+      <p class="coming-note">Tap the mic at the top of Today to say a feed or a diaper — speech stays on your phone (needs a supported iPhone or browser). Typical diaper counts by age sit next to today’s totals, and a simple supplement log shows who gave today’s dose and a days-given summary for checkups.</p>
     </div>
   </section>
 
@@ -246,7 +246,8 @@
       <ul class="why-pills">
         <li><b>$9.99, paid once</b><span>Free to try for 14 days, then one Family Unlock. No subscription, no ads.</span></li>
         <li><b>Your own login</b><span>Every caregiver joins with a code. No shared password.</span></li>
-        <li><b>Ready for checkups</b><span>A one-page summary is included, not locked behind a higher plan.</span></li>
+        <li><b>Log by voice</b><span>Tap the mic, say “4 ounces at 2pm,” and check it before it saves. Speech stays on your phone.</span></li>
+        <li><b>Ready for checkups</b><span>A one-page summary is included, with a days-given total for supplements. Typical diaper counts by age sit next to today’s totals.</span></li>
         <li><b>Private by design</b><span>No ads, and no ad tracking. The app has no analytics, and doesn’t sell or share your baby’s data.</span></li>
       </ul>
 <!--
@@ -269,6 +270,21 @@
     - FAQ (sync: every device joins the sync group with the same email and password; full version removes ads; the FAQ also documents custom supplements): https://nighp.com/babytracker/babytracker_faq.html
     - App Store listing also: What’s Next cues are generated on-device (Plus); Siri Shortcuts and “Quick Log” in your own words (requires iOS 26 with Apple Intelligence). Do not claim Babyway is the only app with voice logging or supplements.
   Android apps (checked Nov 25, 2026): Huckleberry https://play.google.com/store/apps/details?id=com.huckleberry_labs.app ; Nara Baby https://play.google.com/store/apps/details?id=com.naraorganics.nara ; Glow Baby https://play.google.com/store/apps/details?id=com.glow.android.baby ; Baby Tracker (Nighp) https://play.google.com/store/apps/details?id=com.nighp.babytracker_android (FAQ: syncs iOS and Android devices in one sync group).
+  Voice, typical diaper counts by age, and supplements — re-checked Nov 25, 2026, evening, from each company’s current App Store listing (iTunes lookup) and own site/FAQ. Mark only what those pages list. Do not claim Babyway is the only app with voice logging, PDF export, or supplements. Do not say speech staying on the phone means the app is fully offline; the mic is hidden where speech recognition is not available.
+  Huckleberry (voice / diapers / medicine)
+    - AI logging (text, voice or photo) is Plus/Premium, not free: pricing page feature table https://huckleberrycare.com/pricing ; help article https://huckleberry.zendesk.com/hc/en-us/articles/38422287914515-What-is-the-AI-logging-feature ; Plus article also lists “Siri voice-logging” as an additional iOS feature: https://huckleberry.zendesk.com/hc/en-us/articles/1500007717641-What-is-Huckleberry-Plus
+    - Medicine is listed on the free app: App Store description (“One-touch tracker for sleep, diaper changes, feedings, pumping, growth, milestones, weight, potty training, activities, and medicine”; “Reminders for medication, feedings, and more”). Help center trackable events include Medicine: https://huckleberry.zendesk.com/hc/en-us/articles/4533227079315-What-other-events-can-I-track-in-the-app-besides-sleep
+    - Typical wet/dirty diaper counts by age: not listed on the App Store listing, pricing page, or help articles checked the same evening. Insights is described as tips for sleep, feeding, solids and growth, not diaper counts.
+  Nara Baby (voice / diapers / medicine)
+    - Official FAQ: Siri commands for a diaper, bottle, breastfeeding, pumping and sleep; “An active internet connection is required for Siri commands to work.” Also “Sleep and feeding guides by age” / “Age-based feeding and sleep guides,” and “Recent Medications.” https://nara.com/pages/nara-baby-app-faqs
+    - App Store listing: “Live Activities, Siri + Apple Watch”; “Log medical records and medications.” Typical diaper counts by age are not listed (the named guides are sleep and feeding). https://apps.apple.com/us/app/nara-baby-pregnancy-tracker/id1444639029
+  Glow Baby (voice / diapers / medicine)
+    - Official Glow Baby page: free tier tracks “health (temperature, symptoms, medications).” No voice, Siri, Alexa, supplement tracker, or age-based diaper-count guide is listed. https://wp.glowing.com/glow-baby-app
+    - Help center “What is Glow Baby?”: tracks “medication and growth charts.” https://prod-zammad.glowing.net/help/en-us/23-baby-basics/106-what-is-glow-baby
+    - App Store listing (iTunes lookup, Nov 25, 2026): no Siri, voice, Alexa, supplement, or typical-diaper-count feature named. https://apps.apple.com/us/app/glow-baby-tracker-growth-app/id1077177456
+  Baby Tracker (Nighp) (voice / diapers / supplements)
+    - App Store listing: “Use Siri Shortcuts for convenient hands-free logging”; “Use Quick Log to describe an activity to Siri in your own words. Requires iOS 26 with Apple Intelligence turned on.” “Record medications, vaccinations, and temperature.” What’s Next may show “A suggested time to check the diaper” (a timing cue, not typical counts by age). Typical wet/dirty counts by age are not listed. https://apps.apple.com/us/app/baby-tracker-newborn-log/id779656557
+    - Official FAQ: “Can I add other supplements? Yes.” The full-version purchase unblocks Siri Shortcuts. https://nighp.com/babytracker/babytracker_faq.html
   Babyway: free 14-day trial, then one Family Unlock (in-app purchase) for every caregiver and every baby the buyer adds; no ads; own account per caregiver with invite code; pediatrician summary. Android caregivers join with an invite code in the free web app (https://jamiejmann.github.io/little-days/), tested end to end on Nov 25, 2026 with throwaway accounts (Pixel 7 emulation: sign up, join, log); caregivers never pay under the Family Unlock plan.
   Not added yet: "Export all your data anytime". The iOS app's CSV button does nothing in shipped builds and only exported 31 days; fixed on little-days branch ios-export-fix, not shipped.
 -->
@@ -322,6 +338,30 @@
           <span role="cell"><em>PDF export</em></span>
         </div>
         <div class="checks-row" role="row">
+          <span class="checks-label" role="rowheader">Log by voice</span>
+          <span class="is-us" role="cell"><i class="yes" aria-hidden="true">✓</i><span class="sr-only">Yes, speech stays on your phone</span></span>
+          <span role="cell"><em>AI logging, Plus</em></span>
+          <span role="cell"><em>Siri</em></span>
+          <span role="cell"><em>Not listed</em></span>
+          <span role="cell"><em>Siri Shortcuts</em></span>
+        </div>
+        <div class="checks-row" role="row">
+          <span class="checks-label" role="rowheader">Typical diaper counts by age</span>
+          <span class="is-us" role="cell"><i class="yes" aria-hidden="true">✓</i><span class="sr-only">Yes</span></span>
+          <span role="cell"><em>Not listed</em></span>
+          <span role="cell"><em>Not listed</em></span>
+          <span role="cell"><em>Not listed</em></span>
+          <span role="cell"><em>Not listed</em></span>
+        </div>
+        <div class="checks-row" role="row">
+          <span class="checks-label" role="rowheader">Supplement tracking</span>
+          <span class="is-us" role="cell"><i class="yes" aria-hidden="true">✓</i><span class="sr-only">Yes, with days given in the checkup summary</span></span>
+          <span role="cell"><em>Medicine</em></span>
+          <span role="cell"><em>Medications</em></span>
+          <span role="cell"><em>Medications</em></span>
+          <span role="cell"><em>Supplements</em></span>
+        </div>
+        <div class="checks-row" role="row">
           <span class="checks-label" role="rowheader">One unlock, every feature</span>
           <span class="is-us" role="cell"><i class="yes" aria-hidden="true">✓</i><span class="sr-only">Yes</span></span>
           <span role="cell"><i class="no" aria-hidden="true">–</i><span class="sr-only">No, Plus and Premium tiers</span></span>
@@ -339,7 +379,7 @@
           <span role="cell">Free · <small>Plus $49.99/yr</small></span>
         </div>
       </div>
-      <p class="compare-caption" id="checks-foot">Based on App Store listings and each company’s own site as of Nov 2026. Babyway’s price is its planned App Store price. Plans and prices change.</p>
+      <p class="compare-caption" id="checks-foot">Based on App Store listings and each company’s own site as of Nov 25, 2026. Babyway’s price is its planned App Store price. Plans and prices change. “Not listed” means that feature was not named on those pages.</p>
 
       <details class="compare-details">
         <summary>See full comparison</summary>
@@ -348,7 +388,7 @@
             <h3>Babyway</h3>
             <dl>
               <dt>Caregivers</dt><dd>Each person signs in with their <b>own account</b> and joins with a 6-character invite code.</dd>
-              <dt>What’s included</dt><dd>Feeds, diapers, sleep, pumping and medicine (live timer or log a past entry), last-24-hour counts, daily goals for the first 8 weeks, a feeding alarm, growth charts and a pediatrician summary. Coming in the next beta: a mic on Today so you can say a feed or a diaper (on iPhone, speech is turned into text on the device and never uploaded), typical diaper counts by age, and a simple supplement log that shows whether today’s dose was given, who gave it, and a days-given summary for checkups.</dd>
+              <dt>What’s included</dt><dd>Feeds, diapers, sleep, pumping, medicine and supplements (live timer or log a past entry), last-24-hour counts with typical diaper counts by age, daily goals for the first 8 weeks, a feeding alarm, growth charts and a one-page checkup summary that includes days given for supplements. Tap the mic on Today to say a feed, a diaper or a supplement, then check it before it saves. Speech stays on your phone (needs a supported iPhone or browser).</dd>
               <dt>Ads and upgrades</dt><dd>No ads, no subscriptions. Free for 14 days, then one Family Unlock covers every caregiver, for every baby you add (twins and future siblings too).</dd>
             </dl>
           </article>
@@ -356,7 +396,7 @@
             <h3>Huckleberry</h3>
             <dl>
               <dt>Caregivers</dt><dd>Free sync across phones. Caregivers sign in to the <b>same account</b> on each phone.</dd>
-              <dt>What’s included</dt><dd>Free tracking for sleep, feeds, diapers, pumping and more, with basic reports. SweetSpot sleep predictions, Insights, Enhanced Reports and AI logging need Plus; the Berry AI chat and sleep plans need Premium.</dd>
+              <dt>What’s included</dt><dd>Free tracking for sleep, feeds, diapers, pumping, medicine and more, with basic reports. SweetSpot sleep predictions, Insights, Enhanced Reports and AI logging (text, voice or photo; Siri voice-logging on iOS) need Plus; the Berry AI chat and sleep plans need Premium.</dd>
               <dt>Ads and upgrades</dt><dd>No ads. Plus ($11.99/mo or $68.99/yr) and Premium ($14.99/mo or $119.99/yr) auto-renew.</dd>
             </dl>
           </article>
@@ -364,7 +404,7 @@
             <h3>Nara Baby</h3>
             <dl>
               <dt>Caregivers</dt><dd>Unlimited caregivers, each with their own login. One plan covers the family.</dd>
-              <dt>What’s included</dt><dd>Everything, once you pay. After the 7-day trial you can view and export old logs but can’t add new ones without a plan.</dd>
+              <dt>What’s included</dt><dd>Everything, once you pay, including medications and age-based sleep and feeding guides. Siri can log a diaper, bottle, breastfeeding, pumping or sleep; an internet connection is required. After the 7-day trial you can view and export old logs but can’t add new ones without a plan.</dd>
               <dt>Ads and upgrades</dt><dd>No ads, no extra tiers. $9.99 a month or $99.99 lifetime.</dd>
             </dl>
           </article>
@@ -372,7 +412,7 @@
             <h3>Glow Baby</h3>
             <dl>
               <dt>Caregivers</dt><dd>Adding a second caregiver needs the Premium Family Plan ($89.99/yr). Each caregiver then has their own login.</dd>
-              <dt>What’s included</dt><dd>Free tracking for feeds, diapers, sleep, pumping and growth. Reports, PDF/CSV export and an ad-free experience come with Premium.</dd>
+              <dt>What’s included</dt><dd>Free tracking for feeds, diapers, sleep, pumping, growth and medications. Reports, PDF/CSV export and an ad-free experience come with Premium. Voice logging is not listed on Glow’s App Store listing or Glow Baby page.</dd>
               <dt>Ads and upgrades</dt><dd>Free version has ads. Premium is $59.99/yr or $29.99 per 3 months (auto-renew), or $79.99 lifetime.</dd>
             </dl>
           </article>
@@ -380,13 +420,13 @@
             <h3>Baby Tracker <span class="by">by Nighp</span></h3>
             <dl>
               <dt>Caregivers</dt><dd>Free sync: every phone joins the same sync group with the <b>same email and password</b>.</dd>
-              <dt>What’s included</dt><dd>Free tracking for feeds, sleep, diapers, pumping and growth, with PDF reports. Personalized timing cues need Plus.</dd>
+              <dt>What’s included</dt><dd>Free tracking for feeds, sleep, diapers, pumping, growth and custom supplements, with PDF reports. Siri Shortcuts and Quick Log (Quick Log needs iOS 26 with Apple Intelligence) are listed for hands-free logging. Personalized timing cues need Plus.</dd>
               <dt>Ads and upgrades</dt><dd>Free version has ads. Remove Ads is $4.99; Plus ($5.99/mo or $49.99/yr) is an auto-renewing subscription.</dd>
             </dl>
           </article>
         </div>
       </details>
-      <p class="compare-note">Sources: the App Store listings for <a href="https://apps.apple.com/us/app/huckleberry-baby-tracker/id1169136078">Huckleberry</a>, <a href="https://apps.apple.com/us/app/nara-baby-pregnancy-tracker/id1444639029">Nara Baby</a>, <a href="https://apps.apple.com/us/app/glow-baby-tracker-growth-app/id1077177456">Glow Baby</a> and <a href="https://apps.apple.com/us/app/baby-tracker-newborn-log/id779656557">Baby Tracker</a>, plus <a href="https://huckleberrycare.com/pricing">Huckleberry’s pricing page</a>, <a href="https://nara.com/pages/nara-baby-app-faqs">Nara’s FAQ</a>, <a href="https://wp.glowing.com/glow-baby-app">Glow’s Glow Baby page</a> and <a href="https://nighp.com/babytracker/babytracker_faq.html">Baby Tracker’s FAQ</a>, re-checked Nov 25, 2026.</p>
+      <p class="compare-note">Sources: the App Store listings for <a href="https://apps.apple.com/us/app/huckleberry-baby-tracker/id1169136078">Huckleberry</a>, <a href="https://apps.apple.com/us/app/nara-baby-pregnancy-tracker/id1444639029">Nara Baby</a>, <a href="https://apps.apple.com/us/app/glow-baby-tracker-growth-app/id1077177456">Glow Baby</a> and <a href="https://apps.apple.com/us/app/baby-tracker-newborn-log/id779656557">Baby Tracker</a>, plus <a href="https://huckleberrycare.com/pricing">Huckleberry’s pricing page</a>, <a href="https://huckleberry.zendesk.com/hc/en-us/articles/38422287914515-What-is-the-AI-logging-feature">Huckleberry’s AI logging article</a>, <a href="https://nara.com/pages/nara-baby-app-faqs">Nara’s FAQ</a>, <a href="https://wp.glowing.com/glow-baby-app">Glow’s Glow Baby page</a> and <a href="https://nighp.com/babytracker/babytracker_faq.html">Baby Tracker’s FAQ</a>, re-checked Nov 25, 2026.</p>
     </div>
   </section>
 
@@ -455,7 +495,7 @@
         </article>
         <article class="faq-item">
           <h3>How is Babyway different from other baby apps?</h3>
-          <p>Most popular baby trackers use a subscription, show ads, or ask caregivers to share one login. Babyway is free to try for 14 days, then $9.99, paid once, for every caregiver. Each person gets their own login. There’s a one-page summary you can take to checkups. The app has no ads, no ad tracking and no analytics, and we don’t sell or share your baby’s data.</p>
+          <p>Most popular baby trackers use a subscription, show ads, or ask caregivers to share one login. Babyway is free to try for 14 days, then $9.99, paid once, for every caregiver. Each person gets their own login. You can log a feed or a diaper by voice (speech stays on your phone). There’s a one-page summary for checkups, with a days-given total for supplements, and typical diaper counts by age next to today’s totals. The app has no ads, no ad tracking and no analytics, and we don’t sell or share your baby’s data.</p>
         </article>
         <article class="faq-item">
           <h3>What does Babyway cost?</h3>
