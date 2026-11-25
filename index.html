@@ -28,7 +28,7 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="icons/icon-192.png" type="image/png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
 <div class="blob b1" aria-hidden="true"></div>
@@ -43,6 +43,7 @@
       Babyway
     </a>
     <nav aria-label="Primary">
+      <a href="#printable">Free log</a>
       <a href="#pricing">Pricing</a>
       <a href="support.html">Support</a>
       <a href="privacy.html">Privacy</a>
@@ -59,12 +60,12 @@
           <img class="lockup-icon" src="icons/babyway-icon.svg" width="96" height="96" alt="The Babyway app icon: a smiling yellow chick on a teal background.">
           <div class="lockup-text">
             <p class="lockup-name">Babyway</p>
-            <p class="coming-pill">Coming soon to the App Store</p>
+            <p class="coming-pill">Coming to the App Store Jan 12</p>
           </div>
         </div>
         <h1>One baby. Every caregiver.</h1>
         <p class="lede">One simple tracker for feeds, diapers, sleep and more — $9.99 once, for the whole family.</p>
-        <p class="price-hint"><b>$9.99 once. No upgrades, no extra costs.</b></p>
+        <p class="price-hint"><b>$9.99 once. No upgrades, no extra costs.</b><br>Founding price at launch: $6.99 through Jan 19.</p>
       </div>
       <div class="demo-wrap">
         <div class="iphone">
@@ -93,9 +94,43 @@
             Notify me
           </button>
         </div>
-        <p class="launch-note">We’ll email you once at launch. No spam.</p>
+        <p class="launch-note">We’ll email you at launch with the $6.99 founding price. No spam.</p>
         <p class="launch-status" role="status" aria-live="polite"></p>
       </form>
+    </div>
+  </section>
+
+
+  <section class="band band-warm" id="printable" aria-labelledby="printable-title">
+    <div class="chick-mark" aria-hidden="true"><img src="icons/icon-192.png" width="36" height="36" alt=""></div>
+    <div class="wrap printable">
+      <figure class="printable-preview">
+        <img src="img/newborn-log-preview.webp" width="935" height="1210" loading="lazy" alt="Preview of the free Babyway newborn day log: a 24-hour grid with columns for feeds, minutes, wet and dirty diapers, sleep and notes.">
+      </figure>
+      <div class="printable-copy">
+        <p class="printable-kicker">Free printable</p>
+        <h2 id="printable-title">A newborn log you can print today</h2>
+        <p class="printable-lede">A one-page, 24-hour grid for feeds, diapers and sleep, plus a page of questions to bring to your baby’s first pediatrician visits. Print a stack for the fridge or the diaper bag.</p>
+        <ul class="printable-list">
+          <li>Hour-by-hour feeds, wet and dirty diapers, and sleep</li>
+          <li>Daily totals at a glance</li>
+          <li>Common questions to ask the pediatrician, with room for answers</li>
+        </ul>
+        <form class="launch-form launch-form-printable" data-source="printable-log" data-download="downloads/babyway-newborn-log.pdf" novalidate>
+          <p class="launch-heading">Get the free newborn log</p>
+          <div class="launch-row">
+            <label class="sr-only" for="launch-email-printable">Email address</label>
+            <input type="email" id="launch-email-printable" name="email" required autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254" spellcheck="false">
+            <button type="submit">
+              <img src="icons/icon-192.png" width="20" height="20" alt="">
+              Send me the log
+            </button>
+          </div>
+          <p class="launch-note">US Letter PDF, 2 pages. We’ll also email you when Babyway comes to the App Store on Jan 12, with the $6.99 founding price (then $9.99). No spam.</p>
+          <p class="launch-status" role="status" aria-live="polite"></p>
+          <p class="launch-download" hidden><a href="downloads/babyway-newborn-log.pdf" download>Download the newborn log (PDF)</a></p>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -279,6 +314,7 @@
         <h2 id="price-title">A fair price, once</h2>
         <p class="amount">$9.99</p>
         <p class="once">Paid once, for the whole family</p>
+        <p class="founding">Founding price at launch: <b>$6.99</b> through Jan 19, then $9.99.</p>
         <p>No upgrades, no extra costs. Every feature is included with a one-time purchase, for every caregiver in the family.</p>
         <ul>
           <li>No upgrades</li>
@@ -286,7 +322,7 @@
           <li>No subscriptions or ads</li>
         </ul>
         <form class="launch-form" id="notify" data-source="pricing" novalidate>
-          <h3 class="launch-heading">Get notified when Babyway launches</h3>
+          <h3 class="launch-heading">Coming to the App Store Jan 12</h3>
           <div class="launch-row">
             <label class="sr-only" for="launch-email-pricing">Email address</label>
             <input type="email" id="launch-email-pricing" name="email" required autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254" spellcheck="false">
@@ -295,7 +331,7 @@
               Notify me
             </button>
           </div>
-          <p class="launch-note">We’ll email you once at launch. No spam.</p>
+          <p class="launch-note">We’ll email you at launch with the $6.99 founding price. No spam.</p>
           <p class="launch-status" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -321,7 +357,7 @@
         </article>
         <article class="faq-item">
           <h3>What does Babyway cost?</h3>
-          <p>$9.99 once. No upgrades, no extra costs. Every feature is included with a one-time purchase, for the whole family — no subscriptions or ads. The App Store app is coming soon.</p>
+          <p>$9.99 once. No upgrades, no extra costs. Every feature is included with a one-time purchase, for the whole family — no subscriptions or ads. Babyway comes to the App Store on Jan 12, at a $6.99 founding price through Jan 19.</p>
         </article>
       </div>
     </div>
@@ -384,7 +420,14 @@
     if(note) note.hidden=true;
     var btn=form.querySelector('button[type="submit"]');
     if(btn) btn.disabled=true;
-    status(form, THANKS, 'ok');
+    var dl=form.querySelector('.launch-download');
+    if(dl){
+      status(form, "Thanks! Your newborn log is ready. We’ll email you once when Babyway launches.", 'ok');
+      dl.hidden=false;
+      var a=dl.querySelector('a'); if(a) a.focus();
+    } else {
+      status(form, THANKS, 'ok');
+    }
   }
 
   function onSubmit(e){

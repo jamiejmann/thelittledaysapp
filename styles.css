@@ -623,3 +623,40 @@ figure{margin:0}
   font-weight:800;
 }
 .draft-banner p{margin:8px 0 0;font-weight:600}
+
+/* Free printable newborn log offer */
+.printable{display:grid;gap:28px;align-items:center}
+.printable-preview{margin:0;justify-self:center;max-width:300px;width:100%}
+.printable-preview img{
+  width:100%;border-radius:14px;background:#fff;
+  box-shadow:0 14px 36px rgba(14,124,123,.20), 0 0 0 1px rgba(14,124,123,.10);
+  transform:rotate(-2deg);
+}
+.printable-kicker{
+  display:inline-block;margin:0 0 10px;
+  background:var(--teal-ink);color:#fff;
+  font-weight:800;font-size:12px;letter-spacing:.04em;text-transform:uppercase;
+  padding:5px 12px;border-radius:999px;
+}
+.printable-lede{margin:0 0 14px;font-weight:600;max-width:46ch}
+.printable-list{margin:0 0 6px;padding:0;list-style:none;display:grid;gap:6px}
+.printable-list li{position:relative;padding-left:26px;font-weight:700}
+.printable-list li::before{
+  content:"✓";position:absolute;left:0;top:1px;
+  width:18px;height:18px;border-radius:50%;
+  background:var(--teal-soft);color:var(--teal-ink);
+  font-size:12px;font-weight:900;text-align:center;line-height:18px;
+}
+.launch-form-printable{margin:18px 0 0;max-width:30rem}
+.launch-download{margin:12px 0 0}
+.launch-download a{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--teal-ink);color:#fff;text-decoration:none;
+  padding:12px 18px;border-radius:999px;box-shadow:var(--shadow);
+}
+.launch-download a::before{content:"↓";font-weight:900}
+.pricing .founding{margin:0 auto 12px;font-weight:700}
+@media (min-width:800px){
+  .printable{grid-template-columns:minmax(220px,320px) 1fr;gap:48px}
+  .printable-preview{max-width:320px}
+}
