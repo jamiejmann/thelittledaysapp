@@ -201,6 +201,7 @@
           <p>In one tap. A clear summary of feeds, diapers, sleep and growth, with the questions you want to ask the doctor. Tap Share to send it from your phone, or print it.</p>
         </article>
       </div>
+      <p class="coming-note">Coming in the next beta: a mic at the top of Today so you can say a feed or a diaper (on iPhone, the voice stays on the device), typical diaper counts by your baby’s age, and a simple supplement log with a days-given summary for checkups.</p>
     </div>
   </section>
 
@@ -241,13 +242,20 @@
     <div class="chick-mark" aria-hidden="true"><img src="icons/icon-192.png" width="36" height="36" alt=""></div>
     <div class="wrap">
       <h2 id="compare-title">How Babyway compares</h2>
-      <p class="intro">The popular baby apps are useful, but a lot of what families need sits behind a subscription or a single shared login. Here’s how Babyway stacks up.</p>
+      <p class="intro">The popular baby apps are useful, but a lot of what families need sits behind a subscription, ads, or a shared login. Babyway is simpler: one unlock, paid once, for every caregiver.</p>
+      <ul class="why-pills">
+        <li><b>$9.99, paid once</b><span>Free to try for 14 days, then one Family Unlock. No subscription, no ads.</span></li>
+        <li><b>Your own login</b><span>Every caregiver joins with a code. No shared password.</span></li>
+        <li><b>Ready for checkups</b><span>A one-page summary is included, not locked behind a higher plan.</span></li>
+        <li><b>Private by design</b><span>Only the people you invite can see the log. No tracking, no analytics.</span></li>
+      </ul>
 <!--
-  Comparison sources, checked November 25, 2026. Re-check before changing any cell.
+  Comparison sources, checked November 25, 2026 (re-checked the same afternoon). Re-check before changing any cell. Sprout Baby, Baby Connect, Talli and Hatch were researched the same day but are not in this table: Hatch is a sleep device, not a peer logging app; Sprout and Baby Connect prices are listed on the App Store or third-party roundups, but caregiver and ads details were not as clearly documented on official pages as the four apps below; Talli’s app is tied to a $109.99 hardware tracker. Do not name those four in this table without equally strong official sources.
   Huckleberry
     - App Store listing (description + in-app purchases: Plus $11.99/mo or $68.99/yr, Premium $14.99/mo or $119.99/yr): https://apps.apple.com/us/app/huckleberry-baby-tracker/id1169136078
     - Pricing page + FAQ ("caregivers can sign in to the same account on each phone"; subscriptions auto-renew; Enhanced Reports are Plus/Premium): https://huckleberrycare.com/pricing
     - No ads: Google Play listing shows no "Contains ads" label: https://play.google.com/store/apps/details?id=com.huckleberry_labs.app
+    - AI logging (text, voice or photo) is a Plus/Premium feature, not free (pricing page feature table, Nov 25, 2026).
   Nara Baby
     - FAQ ($9.99/month or $99.99 one-time lifetime; 7-day trial, can't add new logs without paying; unlimited caregivers; each user should register their own email and password; ad-free; no additional premium tiers; CSV export): https://nara.com/pages/nara-baby-app-faqs
     - App Store listing: https://apps.apple.com/us/app/nara-baby-pregnancy-tracker/id1444639029
@@ -258,7 +266,8 @@
     - Help center, caregiver needs Premium Family Plan: https://prod-zammad.glowing.net/help/en-us/24-partner-caregiver/110-do-i-have-to-have-a-premium-subscription-to-add-a-caregiver
   Baby Tracker (Nighp)
     - App Store listing (core tracking free; Plus is an auto-renewing subscription that adds ad-free tracking + cues; Remove Ads $4.99, Plus $5.99/mo or $49.99/yr; export records as PDF): https://apps.apple.com/us/app/baby-tracker-newborn-log/id779656557
-    - FAQ (sync: every device joins the sync group with the same email and password; full version removes ads): https://nighp.com/babytracker/babytracker_faq.html
+    - FAQ (sync: every device joins the sync group with the same email and password; full version removes ads; the FAQ also documents custom supplements): https://nighp.com/babytracker/babytracker_faq.html
+    - App Store listing also: What’s Next cues are generated on-device (Plus); Siri Shortcuts and “Quick Log” in your own words (requires iOS 26 with Apple Intelligence). Do not claim Babyway is the only app with voice logging or supplements.
   Android apps (checked Nov 25, 2026): Huckleberry https://play.google.com/store/apps/details?id=com.huckleberry_labs.app ; Nara Baby https://play.google.com/store/apps/details?id=com.naraorganics.nara ; Glow Baby https://play.google.com/store/apps/details?id=com.glow.android.baby ; Baby Tracker (Nighp) https://play.google.com/store/apps/details?id=com.nighp.babytracker_android (FAQ: syncs iOS and Android devices in one sync group).
   Babyway: free 14-day trial, then one Family Unlock (in-app purchase) for every caregiver and every baby the buyer adds; no ads; own account per caregiver with invite code; pediatrician summary. Android caregivers join with an invite code in the free web app (https://jamiejmann.github.io/little-days/), tested end to end on Nov 25, 2026 with throwaway accounts (Pixel 7 emulation: sign up, join, log); caregivers never pay under the Family Unlock plan.
   Not added yet: "Export all your data anytime". The iOS app's CSV button does nothing in shipped builds and only exported 31 days; fixed on little-days branch ios-export-fix, not shipped.
@@ -339,7 +348,7 @@
             <h3>Babyway</h3>
             <dl>
               <dt>Caregivers</dt><dd>Each person signs in with their <b>own account</b> and joins with a 6-character invite code.</dd>
-              <dt>What’s included</dt><dd>Feeds, diapers, sleep, pumping and medicine (live timer or log a past entry), last-24-hour counts, daily goals for the first 8 weeks, a feeding alarm, growth charts and a pediatrician summary.</dd>
+              <dt>What’s included</dt><dd>Feeds, diapers, sleep, pumping and medicine (live timer or log a past entry), last-24-hour counts, daily goals for the first 8 weeks, a feeding alarm, growth charts and a pediatrician summary. Coming in the next beta: a mic on Today so you can say a feed or a diaper (on iPhone, speech is turned into text on the device and never uploaded), typical diaper counts by age, and a simple supplement log that shows whether today’s dose was given, who gave it, and a days-given summary for checkups.</dd>
               <dt>Ads and upgrades</dt><dd>No ads, no subscriptions. Free for 14 days, then one Family Unlock covers every caregiver, for every baby you add (twins and future siblings too).</dd>
             </dl>
           </article>
@@ -377,7 +386,7 @@
           </article>
         </div>
       </details>
-      <p class="compare-note">Sources: the App Store listings for <a href="https://apps.apple.com/us/app/huckleberry-baby-tracker/id1169136078">Huckleberry</a>, <a href="https://apps.apple.com/us/app/nara-baby-pregnancy-tracker/id1444639029">Nara Baby</a>, <a href="https://apps.apple.com/us/app/glow-baby-tracker-growth-app/id1077177456">Glow Baby</a> and <a href="https://apps.apple.com/us/app/baby-tracker-newborn-log/id779656557">Baby Tracker</a>, plus <a href="https://huckleberrycare.com/pricing">Huckleberry’s pricing page</a>, <a href="https://nara.com/pages/nara-baby-app-faqs">Nara’s FAQ</a>, <a href="https://wp.glowing.com/glow-baby-app">Glow’s Glow Baby page</a> and <a href="https://nighp.com/babytracker/babytracker_faq.html">Baby Tracker’s FAQ</a>, checked Nov 25, 2026.</p>
+      <p class="compare-note">Sources: the App Store listings for <a href="https://apps.apple.com/us/app/huckleberry-baby-tracker/id1169136078">Huckleberry</a>, <a href="https://apps.apple.com/us/app/nara-baby-pregnancy-tracker/id1444639029">Nara Baby</a>, <a href="https://apps.apple.com/us/app/glow-baby-tracker-growth-app/id1077177456">Glow Baby</a> and <a href="https://apps.apple.com/us/app/baby-tracker-newborn-log/id779656557">Baby Tracker</a>, plus <a href="https://huckleberrycare.com/pricing">Huckleberry’s pricing page</a>, <a href="https://nara.com/pages/nara-baby-app-faqs">Nara’s FAQ</a>, <a href="https://wp.glowing.com/glow-baby-app">Glow’s Glow Baby page</a> and <a href="https://nighp.com/babytracker/babytracker_faq.html">Baby Tracker’s FAQ</a>, re-checked Nov 25, 2026.</p>
     </div>
   </section>
 
@@ -443,6 +452,10 @@
         <article class="faq-item">
           <h3>Is our family’s data private?</h3>
           <p>Yes. Only the people you invite can see your baby’s information. We never sell your data, and the app has no ads, tracking or analytics. You can read the full <a href="privacy.html">privacy policy</a>.</p>
+        </article>
+        <article class="faq-item">
+          <h3>How is Babyway different from other baby apps?</h3>
+          <p>Most popular baby trackers use a subscription, show ads, or ask caregivers to share one login. Babyway is free to try for 14 days, then $9.99, paid once, for every caregiver. Each person gets their own login. There’s a one-page summary you can take to checkups, and the app has no ads, no tracking and no analytics.</p>
         </article>
         <article class="faq-item">
           <h3>What does Babyway cost?</h3>

@@ -270,6 +270,14 @@ a:hover{text-decoration-thickness:2px}
 }
 .feature h3{font-size:1.05rem;margin:0 0 6px;font-weight:800}
 .feature p{margin:0;font-size:.98rem;font-weight:600}
+.coming-note{
+  margin:18px 0 0;
+  max-width:62ch;
+  font-size:.95rem;
+  font-weight:600;
+  color:var(--soft);
+  line-height:1.45;
+}
 .i-peach{background:var(--peach)}
 .i-mint{background:var(--mint)}
 .i-blue{background:var(--blue)}
@@ -548,6 +556,40 @@ figure{margin:0}
   .checks-price small{font-size:13px}
   .checks-price .is-us b{font-size:15px}
   .checks .yes,.checks .no{width:30px;height:30px;font-size:17px}
+}
+
+.why-pills{
+  list-style:none;
+  margin:0 0 22px;
+  padding:0;
+  display:grid;
+  gap:10px;
+}
+.why-pills li{
+  background:var(--card);
+  border-radius:18px;
+  padding:14px 16px;
+  box-shadow:var(--shadow);
+}
+.why-pills b{
+  display:block;
+  font-size:15px;
+  font-weight:800;
+  margin:0 0 4px;
+  color:var(--teal-ink);
+}
+.why-pills span{
+  display:block;
+  font-size:13.5px;
+  font-weight:600;
+  line-height:1.35;
+  color:#5E5A73;
+}
+@media (min-width:700px){
+  .why-pills{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:1000px){
+  .why-pills{grid-template-columns:repeat(4,minmax(0,1fr))}
 }
 
 .compare-details{margin:16px 0 12px}
