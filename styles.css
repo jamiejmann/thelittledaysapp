@@ -418,6 +418,7 @@ figure{margin:0}
 .site-footer nav{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:8px}
 .site-footer a{color:var(--ink);text-decoration:none}
 .site-footer a:hover{text-decoration:underline}
+.site-footer .foot-note{font-size:12px;font-weight:500;margin-top:6px}
 
 @media (min-width:640px){
   .features{grid-template-columns:1fr 1fr}
