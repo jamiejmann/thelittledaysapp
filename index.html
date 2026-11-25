@@ -43,7 +43,7 @@
       Babyway
     </a>
     <nav aria-label="Primary">
-      <a href="#printable">Free log</a>
+      <a href="#printable">Free printables</a>
       <a href="#beta">Beta</a>
       <a href="#pricing">Pricing</a>
       <a href="support.html">Support</a>
@@ -105,31 +105,42 @@
   <section class="band band-warm" id="printable" aria-labelledby="printable-title">
     <div class="chick-mark" aria-hidden="true"><img src="icons/icon-192.png" width="36" height="36" alt=""></div>
     <div class="wrap printable">
-      <figure class="printable-preview">
-        <img src="img/newborn-log-preview.webp" width="935" height="1210" loading="lazy" alt="Preview of the free Babyway newborn day log: a 24-hour grid with columns for feeds, minutes, wet and dirty diapers, sleep and notes.">
-      </figure>
+      <div class="printable-previews">
+        <figure class="printable-preview">
+          <img src="img/newborn-log-preview.webp?v=2" width="935" height="1210" loading="lazy" alt="Preview of the free Babyway newborn day log: a 24-hour grid with circles for left, right or bottle, tally boxes, a last-feed and next-feed handoff, and typical first-week ranges.">
+          <figcaption>Day log, 2 pages</figcaption>
+        </figure>
+        <figure class="printable-preview preview-sheet">
+          <img src="img/first-week-cheat-sheet-preview.webp?v=1" width="935" height="592" loading="lazy" alt="Preview of the free Babyway first-week cheat sheet: typical feed and diaper ranges, a poop-color key, and a short list of when to call your pediatrician.">
+          <figcaption>First-week cheat sheet</figcaption>
+        </figure>
+      </div>
       <div class="printable-copy">
-        <p class="printable-kicker">Free printable</p>
+        <p class="printable-kicker">Free printables</p>
         <h2 id="printable-title">A newborn log you can print today</h2>
-        <p class="printable-lede">A one-page, 24-hour grid for feeds, diapers and sleep, plus a page of questions to bring to your baby’s first pediatrician visits. Print a stack for the fridge or the diaper bag.</p>
+        <p class="printable-lede">A 2-page, 24-hour log for feeds, diapers and sleep, plus a page of questions for your baby’s first pediatrician visits. Circle L, R or Bottle, tick tally boxes as you go, and leave a last-feed / next-feed note for the next caregiver. Typical first-week ranges are on the page. There’s also a half-page first-week cheat sheet for the fridge. Print a stack. These are for your own notes and aren’t medical advice.</p>
         <ul class="printable-list">
-          <li>Hour-by-hour feeds, wet and dirty diapers, and sleep</li>
-          <li>Daily totals at a glance</li>
-          <li>Common questions to ask the pediatrician, with room for answers</li>
+          <li>Quick circles for L, R or Bottle, then ounces or minutes</li>
+          <li>Tally boxes for feeds and diapers, plus last-feed / next-feed and a shift handoff</li>
+          <li>Typical first-week ranges on the log (not medical advice)</li>
+          <li>Questions for the pediatrician, and a half-page fridge cheat sheet</li>
         </ul>
         <form class="launch-form launch-form-printable" data-source="printable-log" data-download="downloads/babyway-newborn-log.pdf" novalidate>
-          <p class="launch-heading">Get the free newborn log</p>
+          <p class="launch-heading">Get the free printables</p>
           <div class="launch-row">
             <label class="sr-only" for="launch-email-printable">Email address</label>
             <input type="email" id="launch-email-printable" name="email" required autocomplete="email" inputmode="email" placeholder="you@example.com" maxlength="254" spellcheck="false">
             <button type="submit">
               <img src="icons/icon-192.png" width="20" height="20" alt="">
-              Send me the log
+              Send me the PDFs
             </button>
           </div>
-          <p class="launch-note">US Letter PDF, 2 pages. We’ll also send a few short newborn tips and let you know when Babyway comes to the App Store. Unsubscribe anytime.</p>
+          <p class="launch-note">Two US Letter PDFs: a 2-page day log, and a half-page fridge cheat sheet with two copies on one page. We’ll also send a few short newborn tips and let you know when Babyway comes to the App Store. Unsubscribe anytime.</p>
           <p class="launch-status" role="status" aria-live="polite"></p>
-          <p class="launch-download" hidden><a href="downloads/babyway-newborn-log.pdf" download>Download the newborn log (PDF)</a></p>
+          <p class="launch-download" hidden>
+            <a href="downloads/babyway-newborn-log.pdf?v=3" download>Download the newborn log (PDF)</a>
+            <a href="downloads/first-week-cheat-sheet.pdf?v=1" download>Download the first-week cheat sheet (PDF)</a>
+          </p>
         </form>
       </div>
     </div>
@@ -505,7 +516,7 @@
     if(btn) btn.disabled=true;
     var dl=form.querySelector('.launch-download');
     if(dl){
-      status(form, "Thanks! Your newborn log is ready. We’ll send a few short tips and let you know when Babyway launches.", 'ok');
+      status(form, "Thanks! Your printables are ready. We’ll send a few short tips and let you know when Babyway launches.", 'ok');
       dl.hidden=false;
       var a=dl.querySelector('a'); if(a) a.focus();
     } else {

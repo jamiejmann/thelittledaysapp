@@ -650,11 +650,16 @@ figure{margin:0}
 
 /* Free printable newborn log offer */
 .printable{display:grid;gap:28px;align-items:center}
-.printable-preview{margin:0;justify-self:center;max-width:300px;width:100%}
+.printable-previews{display:grid;gap:18px;justify-self:center;max-width:300px;width:100%}
+.printable-preview{margin:0;width:100%}
 .printable-preview img{
   width:100%;border-radius:14px;background:#fff;
   box-shadow:0 14px 36px rgba(14,124,123,.20), 0 0 0 1px rgba(14,124,123,.10);
   transform:rotate(-2deg);
+}
+.printable-preview.preview-sheet img{transform:rotate(1.5deg)}
+.printable-preview figcaption{
+  margin:8px 0 0;text-align:center;font-size:13px;font-weight:800;color:var(--teal-ink);
 }
 .printable-kicker{
   display:inline-block;margin:0 0 10px;
@@ -672,7 +677,7 @@ figure{margin:0}
   font-size:12px;font-weight:900;text-align:center;line-height:18px;
 }
 .launch-form-printable{margin:18px 0 0;max-width:30rem}
-.launch-download{margin:12px 0 0}
+.launch-download{margin:12px 0 0;display:flex;flex-wrap:wrap;gap:10px}
 .launch-download a{
   display:inline-flex;align-items:center;gap:8px;
   background:var(--teal-ink);color:#fff;text-decoration:none;
@@ -682,7 +687,7 @@ figure{margin:0}
 .pricing .founding{margin:0 auto 12px;font-weight:700}
 @media (min-width:800px){
   .printable{grid-template-columns:minmax(220px,320px) 1fr;gap:48px}
-  .printable-preview{max-width:320px}
+  .printable-previews{max-width:320px}
 }
 /* Hide the email row and note once a sign-up succeeds (display:flex would otherwise override [hidden]) */
 .launch-form [hidden]{display:none !important}
