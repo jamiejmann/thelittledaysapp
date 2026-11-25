@@ -248,7 +248,9 @@
   Baby Tracker (Nighp)
     - App Store listing (core tracking free; Plus is an auto-renewing subscription that adds ad-free tracking + cues; Remove Ads $4.99, Plus $5.99/mo or $49.99/yr; export records as PDF): https://apps.apple.com/us/app/baby-tracker-newborn-log/id779656557
     - FAQ (sync: every device joins the sync group with the same email and password; full version removes ads): https://nighp.com/babytracker/babytracker_faq.html
-  Babyway: one-time App Store price, no in-app purchases, no ads, own account per caregiver with invite code, pediatrician summary (from the Babyway app itself).
+  Android apps (checked Nov 25, 2026): Huckleberry https://play.google.com/store/apps/details?id=com.huckleberry_labs.app ; Nara Baby https://play.google.com/store/apps/details?id=com.naraorganics.nara ; Glow Baby https://play.google.com/store/apps/details?id=com.glow.android.baby ; Baby Tracker (Nighp) https://play.google.com/store/apps/details?id=com.nighp.babytracker_android (FAQ: syncs iOS and Android devices in one sync group).
+  Babyway: free 14-day trial, then one Family Unlock (in-app purchase) for every caregiver and every baby the buyer adds; no ads; own account per caregiver with invite code; pediatrician summary. Android caregivers join with an invite code in the free web app (https://jamiejmann.github.io/little-days/), tested end to end on Nov 25, 2026 with throwaway accounts (Pixel 7 emulation: sign up, join, log); caregivers never pay under the Family Unlock plan.
+  Not added yet: "Export all your data anytime". The iOS app's CSV button does nothing in shipped builds and only exported 31 days; fixed on little-days branch ios-export-fix, not shipped.
 -->
       <div class="checks" role="table" aria-labelledby="compare-title" aria-describedby="checks-foot">
         <div class="checks-head" role="row">
@@ -266,6 +268,14 @@
           <span role="cell"><i class="yes" aria-hidden="true">✓</i><span class="sr-only">Yes</span></span>
           <span role="cell"><em>Paid family plan</em></span>
           <span role="cell"><em>Shared login</em></span>
+        </div>
+        <div class="checks-row" role="row">
+          <span class="checks-label" role="rowheader">Android caregivers can join free (web app)</span>
+          <span class="is-us" role="cell"><i class="yes" aria-hidden="true">✓</i><span class="sr-only">Yes, in the free web app</span></span>
+          <span role="cell"><em>Android app, shared login</em></span>
+          <span role="cell"><em>Android app</em></span>
+          <span role="cell"><em>Android app, paid family plan</em></span>
+          <span role="cell"><em>Android app, shared login</em></span>
         </div>
         <div class="checks-row" role="row">
           <span class="checks-label" role="rowheader">No subscription needed</span>
