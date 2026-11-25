@@ -12,20 +12,9 @@
   --teal-soft:#E7F3F2;
   --cream-warm:#F6EFE3;
   --chick:#FFC93C;
+  color-scheme:light;
 }
-@media (prefers-color-scheme:dark){
-  :root{
-    --bg:#1E1B2A; --card:#29253A; --ink:#E9E4F5; --soft:#A39DBB; --line:#3A3550;
-    --blue:#3B4F6B; --mint:#2F5348; --peach:#5C4033; --lav:#463D66; --lav-d:#B9AAF0;
-    --yellow:#544B2E; --shadow:0 6px 20px rgba(0,0,0,.3);
-    --link:#C9B8FF;
-    --teal:#4DB8B6;
-    --teal-ink:#8FDEDC;
-    --teal-soft:#1A2E2D;
-    --cream-warm:#2A241C;
-  }
-  .blob{display:none}
-}
+html{color-scheme:light;background:var(--bg)}
 
 @font-face{
   font-family:"Nunito";
@@ -62,7 +51,11 @@ a:hover{text-decoration-thickness:2px}
 .b2{width:220px;height:220px;background:var(--mint);bottom:-80px;left:-90px}
 .b3{width:140px;height:140px;background:var(--peach);top:45%;right:-50px;opacity:.35}
 
-.wrap{max-width:var(--max);margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.wrap{
+  max-width:var(--max);margin:0 auto;position:relative;z-index:1;
+  padding-left:calc(20px + env(safe-area-inset-left, 0px));
+  padding-right:calc(20px + env(safe-area-inset-right, 0px));
+}
 
 .site-header{
   display:flex;align-items:center;gap:16px;
@@ -146,7 +139,6 @@ a:hover{text-decoration-thickness:2px}
 
 .hero{
   display:grid;gap:28px;align-items:center;
-  padding:0;
 }
 .hero h1{
   font-size:clamp(2.05rem, 6.2vw, 3.35rem);
@@ -382,15 +374,6 @@ figure{margin:0}
 .launch-status.is-error{color:#9B3D3D}
 .launch-form.is-done .launch-heading{margin-bottom:4px}
 
-@media (prefers-color-scheme:dark){
-  .launch-form button[type="submit"]{background:var(--lav-d);color:#1E1B2A}
-  .launch-status.is-error{color:#E8A0A0}
-  .launch-form input[type="email"].is-invalid{border-color:#E8A0A0}
-  .lockup-icon{box-shadow:0 10px 28px rgba(0,0,0,.4)}
-  .coming-pill{border-color:rgba(77,184,182,.35)}
-  .iphone{box-shadow:inset 0 1px 1px rgba(255,255,255,.12), 0 0 0 1px #000, 0 18px 50px rgba(0,0,0,.5)}
-  .chick-mark img{box-shadow:0 4px 14px rgba(0,0,0,.4)}
-}
 
 .faq{display:grid;gap:14px}
 .faq-item{
@@ -630,16 +613,6 @@ figure{margin:0}
 .band-teal .film figcaption,
 .band-warm .intro{
   color:#55516B;
-}
-@media (prefers-color-scheme:dark){
-  .band-teal .intro,
-  .band-teal .compare-caption,
-  .band-teal .compare-note,
-  .band-teal .compare-hint,
-  .band-teal .film figcaption,
-  .band-warm .intro{
-    color:var(--soft);
-  }
 }
 
 .draft-banner{
